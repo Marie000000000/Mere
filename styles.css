@@ -1,0 +1,372 @@
+/* Importation de la police Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Style global */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px ;
+}
+
+.logo img{
+    width: 100px;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a{
+    position: relative;
+    margin: 0 10px;
+    text-decoration: 0;
+    color: rgba(248, 3, 211, 0.938);
+    transition: 05s;
+}
+
+.menu a::before{
+    position: absolute;
+    top:2px;
+    content: "";
+    width: 0px;
+    height: 2px;
+    background-color: blue;
+    transition: 05s;
+}
+
+.menu a:hover::before{
+    width: 100%;
+}
+
+.menu a:hover{
+    color: rgb(90, 20, 220);
+}
+
+/* Rendre la barre de navigation fixe */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  /* Section accueil */
+  .accueil {
+    height: calc(100vh - 50px);
+     background: url("Images/Mum.jpg");  
+     background-position: center;
+     background-size: cover;
+     display: flex;
+     align-items: flex-end;
+     padding-bottom: 50px;
+     text-align: center;
+     margin-top: 80px;
+ }
+
+ #accueil-info {
+    background-position: center; 
+    border-radius: 6px;
+    padding: 50px;
+    width: 1000px;
+    margin: auto;
+    
+}
+
+#accueil-info h1 {
+    align-items: center;
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: crimson;
+    margin: 0;
+}
+
+#accueil-info p {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* A propos */
+/* Titre */
+#apropos h2 {
+    text-align: center;
+    font-size: 3rem;
+    color: #fe0404;
+    margin-bottom: 20px;
+}
+
+/* Conteneur des cartes */
+.apropos-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Style de la carte */
+.apropos-card {
+    position: relative;
+    width: 250px;
+    height: 450px;
+    background-color: #192734;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Icône */
+.apropos-front i {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/* Partie avant de la carte */
+.apropos-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:var(--my-color-gris-fonce);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.apropos-front {
+    color: #fff;
+}
+
+#apropos h3{
+    font-size: 20px;
+    color: #ef0010;
+}
+
+.bg-color {
+    background-color: #0f101099;
+    position: absolute;
+    top: 1;
+    left: 0;
+    height: 115vh;
+    width: 100%;
+    z-index: 1;
+}
+
+#accueil-info {
+    z-index: 2;
+    position: relative;
+}
+
+/* Nos services */
+
+/* Section services */
+.services {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  .services h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #fe0404;
+  }
+  
+  /* Conteneur des cartes */
+  .services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 éléments par ligne */
+    gap: 20px; /* Espacement entre les cartes */
+    margin-top: 20px;
+  }
+  
+  /* Carte de la galerie */
+  .services-item {
+    background: white;
+    border: 1px solid #05f6f6;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .gservices-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Image dans la carte */
+  .services-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  /* Nom de la voiture */
+  .services-item h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #444;
+  }
+  
+  /* Description de la voiture */
+  .services-item p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  /* services2 */
+
+  .services2 {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  .services2 h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #fe0404;
+  }
+  
+  /* Conteneur des cartes */
+  .services2-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 éléments par ligne */
+    gap: 20px; /* Espacement entre les cartes */
+    margin-top: 20px;
+  }
+  
+  /* Carte de la galerie */
+  .services2-item {
+    background: white;
+    border: 1px solid #05f6f6;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .gservices2-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Image dans la carte */
+  .services2-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  /* Nom de la voiture */
+  .services2-item h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #444;
+  }
+  
+  /* Description de la voiture */
+  .services2-item p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+  }
+
+   /* footer  */
+
+footer{
+    padding: 0 15%;
+}
+
+footer .title{
+    margin-bottom: 20px;
+    text-align: center;
+    color: #f30606;
+    font-size: 3rem;
+}
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact .class-form{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+}
+.contact h4{
+    margin-bottom: 20px;
+
+}
+.contact form{
+    display: flex;
+    flex-direction: column;
+}
+.contact form input, textarea{
+    margin: 5px 0px;
+    padding: 5px;
+    border: 1px solid #999;
+    resize: none;
+    outline: 0;
+}
+.contact form button{
+    width: fit-content;
+    padding: 10px 25px;
+    background-color: #f30606;
+    border: 0;
+    font-weight: bold;
+    color: #000;
+    margin-top: 5px;
+   
+}
+.addresse {
+    width: 50%;
+    height: 300px;
+}
+
+.end{
+    margin-top: 70px;
+    background-color: #333;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px 0;
+    color: #fff;
+}
